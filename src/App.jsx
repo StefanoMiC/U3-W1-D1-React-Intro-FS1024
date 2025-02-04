@@ -4,6 +4,7 @@ import "./App.css";
 import TopBar from "./components/TopBar";
 import EpiSection from "./components/EpiSection";
 import ClassComponent from "./components/ClassComponent";
+import TitleAndDescription from "./components/TitleAndDescription";
 
 // questo file rappresenta il nostro PRIMO COMPONENTE REACT
 // è un file con estensione .jsx
@@ -56,6 +57,25 @@ function App() {
       <ClassComponent className="alert alert-primary" alertText="Componente a classe 4" />
       <ClassComponent className="alert alert-primary" alertText="Componente a classe 5" />
       <ClassComponent className="alert alert-success" alertText="Ultimo Alert" />
+
+      <TitleAndDescription title="Sezione aggiuntiva" description="lorem ipsum sit dolor.">
+        {/* quello che inseriamo qui dentro diventa il/i props.children del componente */}
+        <div className="bg-danger">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1732736768092-43a010784507?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            width="300"
+          />
+          <p>descrizione aggiuntiva</p>
+        </div>
+      </TitleAndDescription>
+
+      <TitleAndDescription title="Sezione aggiuntiva" description="lorem ipsum sit dolor.">
+        {/* quello che inseriamo qui dentro diventa il/i props.children del componente */}
+        <div className="bg-danger">
+          <label htmlFor="username">Inserisci user name</label>
+          <input type="text" id="username" placeholder="inserisci username" />
+        </div>
+      </TitleAndDescription>
     </div>
   );
 }
